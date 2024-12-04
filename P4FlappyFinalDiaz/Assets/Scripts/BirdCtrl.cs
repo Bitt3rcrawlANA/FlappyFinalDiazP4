@@ -8,11 +8,13 @@ public class BirdCtrl : MonoBehaviour
 
     private bool isDead = false;
     private Rigidbody2D rb2d;
+    private Animator animeLol;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        animeLol = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class BirdCtrl : MonoBehaviour
             {
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
+                animeLol.SetTrigger("Flap");
             }
         }
     }
@@ -31,5 +34,6 @@ public class BirdCtrl : MonoBehaviour
     void OnCollisionEnter2D()
     {
         isDead = true;
+        animeLol.SetTrigger("Die");
     }
 }
