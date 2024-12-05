@@ -6,7 +6,7 @@ public class BirdCtrl : MonoBehaviour
 {
     public float upForce = 200f;
 
-    private bool isDead = false;
+    public bool isDead = false;
     private Rigidbody2D rb2d;
     private Animator animeLol;
 
@@ -35,5 +35,7 @@ public class BirdCtrl : MonoBehaviour
     {
         isDead = true;
         animeLol.SetTrigger("Die");
+        GameCtrl.Instance.BirdDied();
     }
 }
+     
