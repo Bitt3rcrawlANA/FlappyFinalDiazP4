@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI
+using UnityEngine.UI;
 
 public class GameCtrl : MonoBehaviour
 {
@@ -11,6 +11,8 @@ public class GameCtrl : MonoBehaviour
     public Text scoreText;
     public bool gameOver = false;
     public float scrollSpeed = 3.5f;
+
+    private int score = 0;
 
     // Called before Start
     void Awake()

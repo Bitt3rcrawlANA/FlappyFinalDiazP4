@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepeatBackground : MonoBehaviour
+public class RepeatSky : MonoBehaviour
 {
     private BoxCollider2D groundCollider;
     private float groundHorizontalLength;
@@ -25,7 +25,7 @@ public class RepeatBackground : MonoBehaviour
 
     private void RepositionBackground()
     {
-        Vector2 groundOffset = new Vector2(groundHorizontalLength * 4f, 0);
+        Vector2 groundOffset = new Vector2(groundHorizontalLength * 3f, 0);
         transform.position = (Vector2)transform.position + groundOffset;
     }
 }

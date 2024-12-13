@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrollGround : MonoBehaviour
+public class Scroll : MonoBehaviour
 {
     private Rigidbody2D rb2d;
     // Start is called before the first frame update
